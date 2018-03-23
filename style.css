@@ -1,0 +1,298 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body {
+	background-image: url('img/tlo3.jpg'); 
+	background-attachment: fixed;
+}
+
+.container{
+	width: 1004px; /* bo zazwyczaj 1024 i 20 px na scroll*/
+	margin: auto;
+	
+}
+/*górna część strony /kontenera*/
+#top_container {
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	width: 944px;
+	height: 113px;
+	background-color: #3E241A;
+	position: relative;
+	font-size: 11px;
+	font-family: Helvetica, sans-serif;
+	line-height: 110%;
+	color: white;
+}
+.logo {
+	position: absolute;
+	height: 60%;
+	filter: sepia(70%);
+	left: 30px;
+	top: 10px;
+}
+#contact_box {
+	position: absolute;
+	right: 40px;
+	top: 10px;
+	text-align: center;
+}
+a {
+	color: #7E645A;
+	text-decoration: none;
+
+}
+a:hover {
+	color: #8F756B;
+	font-weight: bold;
+}
+
+/* górne menu*/
+
+#top_menu {
+	position: absolute;
+	left: 50px;
+	bottom: -2px;
+
+
+}
+#proper_top_menu li{
+	list-style-type: none;
+	float: left;
+
+
+}
+#proper_top_menu li a {
+	height: 25px;
+	display: inline-block;
+	float: left;
+	padding: 0px 10px;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	background-color: #665142;
+	color: #ffffff;
+	border-top: 4px solid #2E2121;
+
+
+}
+
+#proper_top_menu li:first-child {
+	border-left: 4px solid #222222;
+	}
+
+#proper_top_menu li a:hover, #proper_top_menu li.actual a {
+	background-color: #2E2121;
+}
+
+span.link {
+	display: inline-block;
+	margin-top: 10px;
+}
+
+/* środkowe menu*/
+#middle_menu {
+
+	background-color: #2E2121;
+	margin-left: auto;
+	margin-right: auto;
+	width: 944px;
+	height: 32px;
+}
+
+#middle_menu li{
+
+	list-style-type: none;
+	float: left;
+
+}
+#middle_menu li a {
+	font-size: 15px;
+	font-weight: bold;
+}
+#middle_menu li span.link2 {
+	display: block;
+	margin-top: 7px;
+	
+}
+
+#middle_menu #first_level {
+	margin-left: 70px;
+}
+#middle_menu li span.break {
+	display: inline-block;
+	margin: 6px 10px 0px 10px;
+	color: #7E645A;
+}
+/*menu rozwijane*/
+
+#first_level li .second_level {
+	display: none;
+	background-color: #2E2121;
+	border-left: 4px solid #7E645A;
+	border-right: 2px solid #7E645A;
+	border-bottom: 2px solid #7E645A;
+	
+	filter: alpha(opacity=95);
+}
+#first_level li:hover .second_level {
+	display: block;
+	width: 210px;
+	position: absolute; /* to co się rozwija w dół pozycjonujemy absolutnie względem tych 4 li na które najezdzamy zeby rozwinac w 1 poziomie */
+	top: 1.9em; /* to powoduje ze jak chcemy najechac na rozwiniete linki to sie zdaza schowac, dodamy wysokosc do li*/
+	left: 0em;
+
+}
+#first_level li .second_level li {
+	width: 150px;
+	text-align: left;
+	margin-left: 30px;
+	border-top: 1px solid #7E645A;
+}
+
+#first_level li .second_level li a {
+	display: block;
+	width: 150px;
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+}
+#first_level li .second_level li a:hover {
+	background-color: #7E645A;
+	color: #2E2121;
+	padding-left: 10px;
+	margin-left: -10px;
+	padding-right: 10px;
+	margin-top: -1px;
+	border-top: 1px solid #7E645A;
+	
+}
+#first_level li {
+	position: relative;
+}
+
+#first_level > li { /* > oznacza ze akceptujemy to tylko do 1 poziomu li, juz do li wewnatrz nie*/
+	height: 32px;
+}
+#first_level li .second_level li:first-child {
+	margin-top: 5px;
+}
+
+/* glowna czesc strony - zawartosc */
+
+#content {
+	width: 944px;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+#top_content, #down_content {
+
+	width: 940px;
+	height: 17px;
+	background-color: white;
+	border-top: 4px solid gray;
+	border-left: 4px solid darkgray;
+	border-radius: 9px 5px 0 0px;
+}
+
+#down_content {
+	height: 31px;
+	border-radius: 9px 5px;
+}
+/* */
+#middle_content {
+	background-color: white;
+	border-left: 4px solid darkgray;
+	width: 940px;
+	border-radius: 0 0 5px 9px;
+}
+#tekst {
+	text-align: justify;
+	padding: 10px 50px;
+	font-size: 12px;
+	line-height: 160%;
+	font-family: Verdana, Helvetica, sans-serif;
+	color: #2E2121;
+}
+
+h1 {
+	font-size: 20px;
+	text-align: center;
+	margin-bottom: 22px;
+	font-family: Georgia;
+	color: #665142;
+}
+p {
+	margin-bottom: 15px;
+
+}
+#content .side_tekst {
+	text-align: left;
+	float: right;
+	width: 150px;
+	margin: 30px 20px;
+	font-size: 10px;
+	font-family: Verdana;
+	padding: 20px 15px;
+	border: 1px dotted black;
+}
+/*dol strony i stopka*/
+#bottom_part {
+	margin-left: auto;
+	margin-right: auto;
+	width: 900px;
+	height: 113px;
+	background-color: #3E241A;
+	margin-top: 10px;
+	position: relative;
+	padding: 30px 25px 10px 25px;
+	
+}
+#header {
+	font-size: 15px;
+	font-family: Georgia;
+	font-weight: bold;
+}
+#text_newsletter {
+	color: white;
+	text-align: left;
+}
+#form {
+	font-size: 12px;
+	margin-top: 10px;
+}
+.input_email {
+	background-color: #7E645A;
+	font-size: 12px;
+	color: white;
+}
+.submit_btn {
+	padding: 5px;
+	font-size: 10px;
+	font-family: Verdana;
+	border: 2px outset gray;
+	font-weight: bold;
+	cursor: pointer;
+
+}
+.submit_btn:active {
+	border:2px inset gray;
+}
+.submit_btn:hover {
+	color: #7E645A;
+	
+}
+#newsletter_info {
+	font-size: 12px;
+	font-family: Verdana;
+	margin-left: 25;
+	margin-top: 6px;
+}
+#copyright {
+	font-size: 10px;
+	font-family: Verdana;
+	color: white;
+	padding: 5px;
+	text-align: center;
+}
